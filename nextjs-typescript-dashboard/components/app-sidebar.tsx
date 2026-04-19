@@ -25,15 +25,15 @@ const data = {
   },
   navMain: [
     {
-      title: "Dashboard",
-      url: "#",
+      title: "Listing Managment",
+      url: "/pages/listingManagment",
       icon: (
         <LayoutDashboardIcon
         />
       ),
     },
     {
-      title: "Lifecycle",
+      title: "All Vehicles",
       url: "#",
       icon: (
         <ListIcon
@@ -41,26 +41,66 @@ const data = {
       ),
     },
     {
-      title: "Analytics",
+      title: "Auction Listings",
       url: "#",
       icon: (
-        <ChartBarIcon
+        <ListIcon
         />
       ),
     },
     {
-      title: "Projects",
+      title: "Lead Tracking",
       url: "#",
       icon: (
-        <FolderIcon
+        <ListIcon
         />
       ),
     },
     {
-      title: "Team",
+      title: "User Managment",
       url: "#",
       icon: (
-        <UsersIcon
+        <ListIcon
+        />
+      ),
+    },
+    {
+      title: "Staff Permission",
+      url: "#",
+      icon: (
+        <ListIcon
+        />
+      ),
+    },
+    {
+      title: "Car Inspection",
+      url: "#",
+      icon: (
+        <ListIcon
+        />
+      ),
+    },
+    {
+      title: "Car Reporting",
+      url: "#",
+      icon: (
+        <ListIcon
+        />
+      ),
+    },
+    {
+      title: "Orders",
+      url: "#",
+      icon: (
+        <ListIcon
+        />
+      ),
+    },
+    {
+      title: "Payments",
+      url: "#",
+      icon: (
+        <ListIcon
         />
       ),
     },
@@ -69,7 +109,7 @@ const data = {
     {
       title: "Capture",
       icon: (
-        <CameraIcon
+        <ListIcon
         />
       ),
       isActive: true,
@@ -88,7 +128,7 @@ const data = {
     {
       title: "Proposal",
       icon: (
-        <FileTextIcon
+        <ListIcon
         />
       ),
       url: "#",
@@ -106,7 +146,7 @@ const data = {
     {
       title: "Prompts",
       icon: (
-        <FileTextIcon
+        <ListIcon
         />
       ),
       url: "#",
@@ -131,49 +171,7 @@ const data = {
         />
       ),
     },
-    {
-      title: "Get Help",
-      url: "#",
-      icon: (
-        <CircleHelpIcon
-        />
-      ),
-    },
-    {
-      title: "Search",
-      url: "#",
-      icon: (
-        <SearchIcon
-        />
-      ),
-    },
-  ],
-  documents: [
-    {
-      name: "Data Library",
-      url: "#",
-      icon: (
-        <DatabaseIcon
-        />
-      ),
-    },
-    {
-      name: "Reports",
-      url: "#",
-      icon: (
-        <FileChartColumnIcon
-        />
-      ),
-    },
-    {
-      name: "Word Assistant",
-      url: "#",
-      icon: (
-        <FileIcon
-        />
-      ),
-    },
-  ],
+  ],  
 }
 
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
@@ -196,7 +194,6 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
       </SidebarHeader>
       <SidebarContent>
         <NavMain items={data.navMain} />
-        <NavDocuments items={data.documents} />
         <NavSecondary items={data.navSecondary} className="mt-auto" />
       </SidebarContent>
       <SidebarFooter>
